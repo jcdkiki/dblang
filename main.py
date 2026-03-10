@@ -140,7 +140,7 @@ def parse_what():
     raise Exception(f"Failed to match <what>\nGot {cur_token}")
 
 def parse_optional_name(gender):
-    name = f"<optional_name_{gender}"
+    name = f"<optional_name_{gender}>"
     if is_token(tag="Surn"):
         t1 = expect_token(tag="Surn")
         t2 = parse_optional_name1(gender)
